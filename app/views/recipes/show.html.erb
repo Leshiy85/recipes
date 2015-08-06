@@ -1,6 +1,5 @@
-<p>
-	<h1><%= @recipe.title %></h1>
-</p>
+<%= render 'shared/page_title', title: @recipe.title %>
+
 <div class="row">
 	<div class="col-md-4 pull-right center">
 		<%= gravatar_for @recipe.user, size: 200 %>
