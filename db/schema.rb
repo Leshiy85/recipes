@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150807090718) do
+ActiveRecord::Schema.define(version: 20150807130048) do
 
   create_table "likes", force: :cascade do |t|
     t.boolean  "like"
@@ -34,8 +34,9 @@ ActiveRecord::Schema.define(version: 20150807090718) do
   create_table "users", force: :cascade do |t|
     t.string   "username"
     t.string   "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "password_digest"
   end
 
 end
