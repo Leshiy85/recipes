@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   root 'pages#index'
   get '/pages', to: 'pages#index'
-  resources :recipes
+
+  resources :recipes do
+    member do
+      post 'like'
+    end
+  end
   resources :pages
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
